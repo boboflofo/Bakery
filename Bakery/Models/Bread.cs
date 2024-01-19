@@ -1,6 +1,6 @@
 namespace Bakery.Models
 {
-  public class Pastry
+  public class Bread
   {
     // Code for Triangle business logic will go here.
   }
