@@ -2,6 +2,9 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    // Code for Triangle business logic will go here.
+    public Bread(int amount)
+    {
+      
+    }
   }
 }
