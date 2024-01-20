@@ -1,4 +1,5 @@
 using System;
+using Bakery.Models;
 
 namespace Bakery
 {
@@ -14,6 +15,19 @@ namespace Bakery
       int breadItems = Convert.ToInt32(Console.ReadLine());
       Console.WriteLine("Please enter the number of pastry items to purchase:");
       int pastryItems = Convert.ToInt32(Console.ReadLine());
+      ProcessTotalPrice(breadItems,pastryItems);
+    }
+
+    static void ProcessTotalPrice(int breadAmount, int pastryAmount) 
+    {
+      Bread newBread = new Bread(breadAmount);
+      newBread.SetPrice();
+      Pastry newPastry = new Pastry(pastryAmount);
+      newPastry.SetPrice();
+      int total = newBread.Price + newPastry.Price;
+      Console.WriteLine("-----------------------------------------");
+      Console.WriteLine("Your total cost is: $" + total + ".");
+      Console.WriteLine("-----------------------------------------");
     }
   }
 }
